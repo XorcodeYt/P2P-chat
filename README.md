@@ -20,8 +20,8 @@ A modern, **peer-to-peer encrypted chat** with **no backend**.
 
 ## 🚀 How to Use
 
-1. **Try it right now with the [online demo on Vercel](https://p2-p-chat-eight.vercel.app/) OR Open `index.html` in your browser**
-   *(Works with Chrome and Firefox. If you encounter issues, try both!)*
+1. **Try it right now with the [online demo on Vercel](https://p2-p-chat-eight.vercel.app/) OR open `index.html` in your browser**
+   (Works with Chrome and Firefox. If you encounter issues, try both)
 
 2. **Choose a username**  
    This name will appear in the chat.
