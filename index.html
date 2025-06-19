@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat P2P PeerJS</title>
+  <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="loginScreen">
+      <h1>
+        <span style="font-size: 2rem; vertical-align: middle;">💬</span>
+        P2P Chat with PeerJS
+      </h1>
+      <div>
+        <input id="usernameInput" type="text" maxlength="22" placeholder="Choose a nickname" autofocus>
+        <button id="setUsernameBtn">Enter</button>
+      </div>
+    </div>
+
+    <div id="mainChat" style="display:none;">
+      <div class="header-row">
+        <h1>
+          <span style="font-size: 2rem; vertical-align: middle;">💬</span>
+          P2P Chat with PeerJS
+        </h1>
+        <span id="status" class="status-indicator">Offline</span>
+      </div>
+      <div id="messages"></div>
+      <div class="msg-row">
+        <input id="msgInput" type="text" placeholder="Your message..." />
+        <button id="sendBtn">Send</button>
+      </div>
+      <div class="peer-row">
+        <div class="peer-col">
+          <h3>🎯 My PeerJS ID</h3>
+          <input id="offerOut" type="text" readonly />
+          <button id="copyIdBtn" class="copy-btn">Copy ID</button>
+        </div>
+        <div class="peer-col">
+          <h3>🆔 Other user's ID</h3>
+          <input id="offerIn" type="text" placeholder="Passte the ID here..." />
+          <button id="startBtn">Connect</button>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:-1.1rem;font-size:1.08rem;color:#ffd564;font-weight:500;">
+        Logged in as <span id="currentUsername"></span>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
