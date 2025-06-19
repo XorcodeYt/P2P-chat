@@ -1,4 +1,33 @@
-const peer = new Peer();
+const peer = new Peer({
+  config: {
+    iceServers: [
+      {
+        urls: "stun:stun.relay.metered.ca:80",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:80",
+        username: "a97fd3a4f8c9592fbb10eac4",
+        credential: "pi3gSvNSb+u/lKMh",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:80?transport=tcp",
+        username: "a97fd3a4f8c9592fbb10eac4",
+        credential: "pi3gSvNSb+u/lKMh",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:443",
+        username: "a97fd3a4f8c9592fbb10eac4",
+        credential: "pi3gSvNSb+u/lKMh",
+      },
+      {
+        urls: "turns:global.relay.metered.ca:443?transport=tcp",
+        username: "a97fd3a4f8c9592fbb10eac4",
+        credential: "pi3gSvNSb+u/lKMh",
+      }
+    ],
+    iceTransportPolicy: "relay",
+  }
+});
 let conn = null;
 let username = null;
 let aesKey = null;
